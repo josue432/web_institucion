@@ -1,0 +1,155 @@
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin:0;
+padding:0;
+background: linear-gradient(135deg,#1f4e79,#4facfe);
+min-height:100vh;
+color:#333;
+}
+
+/* TITULOS */
+
+h1{
+text-align:center;
+color:white;
+margin-top:30px;
+font-size:40px;
+}
+
+h2{
+text-align:center;
+color:#333;
+}
+
+/* FORMULARIO */
+
+.form-container{
+display:grid;
+gap:10px;
+max-width:500px;
+margin:30px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* INPUTS */
+
+input,select{
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+transition:0.3s;
+}
+
+input:focus,select:focus{
+border-color:#4facfe;
+outline:none;
+box-shadow:0 0 5px rgba(79,172,254,0.5);
+}
+
+/* BOTONES */
+
+.botones{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+button{
+flex:1;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+/* GUARDAR */
+
+button:first-child{
+background:#28a745;
+color:white;
+}
+
+button:first-child:hover{
+background:#218838;
+}
+
+/* CANCELAR */
+
+.cancelar{
+background:#ffc107;
+color:black;
+}
+
+.cancelar:hover{
+background:#e0a800;
+}
+
+/* BUSCADOR */
+
+#busqueda{
+display:block;
+margin:20px auto;
+padding:10px;
+width:320px;
+border-radius:10px;
+border:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* TABLA */
+
+table{
+width:90%;
+margin:20px auto;
+border-collapse:collapse;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+th{
+background:#1f4e79;
+color:white;
+padding:12px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #eee;
+}
+
+tr:hover{
+background:#f2f2f2;
+}
+
+/* BOTONES TABLA */
+
+.editar{
+background:#007bff;
+color:white;
+border-radius:6px;
+padding:6px 10px;
+}
+
+.editar:hover{
+background:#0056b3;
+}
+
+.eliminar{
+background:#dc3545;
+color:black;
+border-radius:6px;
+padding:6px 10px;
+}
+
+.eliminar:hover{
+background:#a71d2a;
+color:white;
+}
