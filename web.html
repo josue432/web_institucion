@@ -3,15 +3,21 @@
 
 <head>
 <meta charset="UTF-8">
-<title>CRUD Docentes</title>
+<title>Sistema de Gestión de Docentes</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<h1>Gestión de Docentes</h1>
+<nav class="navbar">
+<h2>Sistema Académico</h2>
+</nav>
 
-<div class="form-container">
+<div class="container">
+
+<div class="form-card">
+
+<h2>Registro de Docentes</h2>
 
 <input type="hidden" id="editIndex">
 
@@ -33,7 +39,7 @@
 <label>Fecha Nacimiento</label>
 <input type="date" id="fecha">
 
-<label>Nivel de Estudios</label>
+<label>Nivel Estudios</label>
 <select id="nivel">
 <option value="">Seleccione</option>
 <option value="Pregrado">Pregrado</option>
@@ -65,23 +71,27 @@
 <input type="number" id="salario">
 
 <div class="botones">
+
 <button onclick="guardarDocente()">Guardar</button>
+
 <button onclick="cancelarEdicion()" class="cancelar">Cancelar</button>
-</div>
 
 </div>
 
-<h2>Buscar docente</h2>
+</div>
 
-<input type="text" id="busqueda" placeholder="Buscar por nombre o apellido" onkeyup="filtrarDocentes()">
+<div class="tabla-card">
 
 <h2>Lista de Docentes</h2>
+
+<input type="text" id="busqueda" placeholder="Buscar docente..." onkeyup="filtrarDocentes()">
 
 <table>
 
 <thead>
+
 <tr>
-<th>Tipo Doc</th>
+<th>Tipo</th>
 <th>Nombre</th>
 <th>Apellido</th>
 <th>Fecha</th>
@@ -92,11 +102,16 @@
 <th>Salario</th>
 <th>Acciones</th>
 </tr>
+
 </thead>
 
 <tbody id="tablaDocentes"></tbody>
 
 </table>
+
+</div>
+
+</div>
 
 <script src="script.js"></script>
 

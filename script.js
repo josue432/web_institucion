@@ -70,7 +70,7 @@ tabla.innerHTML+=`
 
 <tr>
 
-<td>${docente.tipoDoc}</td>
+<td><span class="badge ${docente.tipoDoc.replace('.','').toLowerCase()}">${docente.tipoDoc}</span></td>
 
 <td>${docente.nombre}</td>
 
@@ -80,17 +80,17 @@ tabla.innerHTML+=`
 
 <td>${docente.nivel}</td>
 
-<td>${docente.area}</td>
+<td><span class="badge ${docente.area.toLowerCase()}">${docente.area}</span></td>
 
-<td>${docente.grado}</td>
+<td><span class="badge ${obtenerClaseSemestre(docente.grado)}">${docente.grado}</span></td>
 
 <td>${docente.eps}</td>
 
-<td>${docente.salario}</td>
-
+<td class="salario">$ ${docente.salario}</td>
 <td>
 
 <button class="editar" onclick="editarDocente(${index})">Editar</button>
+
 <button class="eliminar" onclick="eliminarDocente(${index})">Eliminar</button>
 
 </td>
@@ -167,6 +167,14 @@ function formatearFecha(fecha){
 let partes=fecha.split("-");
 
 return `${partes[2]}/${partes[1]}/${partes[0]}`;
+
+}
+function obtenerClaseSemestre(grado){
+
+if(grado==="Primer Semestre") return "sem1";
+if(grado==="Segundo Semestre") return "sem2";
+if(grado==="Tercer Semestre") return "sem3";
+if(grado==="Cuarto Semestre") return "sem4";
 
 }
 
